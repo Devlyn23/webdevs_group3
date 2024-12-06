@@ -33,7 +33,7 @@ function CreateSurveys(props) {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/surveys/", {
+      const response = await fetch("https://localhost:8080/surveys/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +61,8 @@ function CreateSurveys(props) {
   };
 
   return (
-    <Container>
+    <Container className="background">
+      <div className="wrapper">
       <h1>Survey Information</h1>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group controlId="validationCustom01">
@@ -144,6 +145,7 @@ function CreateSurveys(props) {
           </Button>
         </div>
       </Form>
+      </div>
     </Container>
   );
 }

@@ -18,7 +18,7 @@ function EditSurvey() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/questions/", {
+        const response = await fetch("https://localhost:8080/questions/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -62,7 +62,8 @@ function EditSurvey() {
   }
 
   return (
-    <Container>
+    <Container className="background">
+      <div className="wrapperX">
       <Row>
         <Col>
           <h1>Survey: {params.name}</h1>
@@ -99,6 +100,7 @@ function EditSurvey() {
           </div>
         </Col>
       </Row>
+      </div>
     </Container>
   );
 }

@@ -11,13 +11,14 @@ function MySurveys() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/surveys", {
+        const response = await fetch("https://localhost:8080/surveys", {
           method: "GET",
           credentials: "include", // include cookies
         });
 
         if (response.status === 401) {
           navigate("/login"); // redirect to login page if unauthorized
+          console.log(response.status)
         } else if (!response.ok) {
           throw new Error("Failed to load surveys");
         } else {
@@ -34,7 +35,7 @@ function MySurveys() {
 
   const handleDeleteS = async (id) => {
     try {
-      const response = await fetch("http://localhost:8080/surveys/" + id, {
+      const response = await fetch("https://localhost:8080/surveys/" + id, {
         method: "DELETE",
         credentials: "include", // include cookies
       });
@@ -55,7 +56,7 @@ function MySurveys() {
   const questionsDelete = async (id) => {
     const data = { surveyid: id };
     try {
-      const response = await fetch("http://localhost:8080/questions", {
+      const response = await fetch("https://localhost:8080/questions", {
         method: "DELETE",
         credentials: "include", // include cookies
         body: JSON.stringify(data),
@@ -82,7 +83,8 @@ function MySurveys() {
   }
 
   return (
-    <Container>
+    <Container className="background">
+      <div className="wrapperX">
       <Row>
         <Col>
           <h1>My Surveys</h1>
@@ -139,6 +141,7 @@ function MySurveys() {
           )}
         </Col>
       </Row>
+      </div>
     </Container>
   );
 }

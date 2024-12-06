@@ -21,7 +21,7 @@ function Registration() {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/auth/registration", {
+      const response = await fetch("https://localhost:8080/auth/registration", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +43,8 @@ function Registration() {
   };
 
   return (
-    <Container>
+    <Container className="background">
+      <div className="wrapper">
       <div className="registration-container">
         <h1>Registration</h1>
         {success && (
@@ -100,6 +101,7 @@ function Registration() {
             </Button>
           </div>
         </Form>
+      </div>
       </div>
     </Container>
   );

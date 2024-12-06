@@ -18,7 +18,7 @@ function EditSurvey() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/questions/", {
+        const response = await fetch("https://surveysiteapi.onrender.com/questions/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -45,7 +45,7 @@ function EditSurvey() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch("http://localhost:8080/questions/" + id, {
+      const response = await fetch("https://localhost:8080/questions/" + id, {
         method: "DELETE",
         credentials: "include", // include cookies
       });
@@ -71,7 +71,8 @@ function EditSurvey() {
   }
 
   return (
-    <Container>
+    <Container className="background">
+      <div className="wrapperX">
       <Row>
         <Col>
           <h1>Questions</h1>
@@ -135,6 +136,7 @@ function EditSurvey() {
           )}
         </Col>
       </Row>
+      </div>
     </Container>
   );
 }

@@ -21,7 +21,7 @@ function Login(props) {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("https://localhost:8080/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -49,7 +49,8 @@ function Login(props) {
   };
 
   return (
-    <Container>
+    <Container className="background">
+      <div className="wrapper">
       <div className="login-container">
         <h1>Log In</h1>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -113,6 +114,7 @@ function Login(props) {
             </Button>
           </div>
         </Form>
+      </div>
       </div>
     </Container>
   );

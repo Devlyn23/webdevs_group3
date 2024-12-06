@@ -37,7 +37,7 @@ function CreateSurveys(props) {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/questions/update", {
+      const response = await fetch("https://localhost:8080/questions/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +65,8 @@ function CreateSurveys(props) {
   };
 
   return (
-    <Container>
+    <Container className="background">
+      <div className="wrapper">
       <h1>Update Question</h1>
       <p style={{ fontSize: "24px" }}>
         Original Question: <strong>{params.question}</strong>
@@ -163,6 +164,7 @@ function CreateSurveys(props) {
           </Button>
         </div>
       </Form>
+      </div>
     </Container>
   );
 }

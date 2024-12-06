@@ -1,11 +1,13 @@
 #root {
   max-width: 1300px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 0vh;
 }
 
 body {
   box-sizing: border-box;
+  background-color: #FDA172;
 }
 
 .logo {
@@ -16,6 +18,28 @@ body {
 .active {
   border-bottom: 2px solid;
 }
+
+.wrapper {
+  background-color: #FFFFFF;
+  margin: -11px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  margin-bottom: -30px;
+  padding-top: 15px;
+  height: 67.5vh;
+}
+
+.wrapperX {
+  background-color: #FFFFFF;
+  margin: -11px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  margin-bottom: -30px;
+  padding-top: 15px;
+}
+
 
 .nav-item a {
   text-decoration: none;
@@ -42,13 +66,24 @@ div button:nth-child(1) {
   width: 500px;
 }
 
-.homeAlign {
-  display: flex;
-}
-
 .homeTxt {
   font-size: 20px;
   font-weight: bold;
+  padding-left: 30px;
+}
+
+.descTxt {
+  width: 400px;
+  padding-left: 30px;
+}
+
+.welcomeMsg {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.flexAlign {
+  display: flex;
 }
 
 .imgBorder {

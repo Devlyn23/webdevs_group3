@@ -20,7 +20,7 @@ function Header() {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await fetch("http://localhost:8080/auth/status", {
+        const response = await fetch("https://localhost:8080/auth/status", {
           method: "GET",
           credentials: "include",
         });
@@ -40,7 +40,7 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:8080/auth/logout", {
+      const response = await fetch("https://localhost:8080/auth/logout", {
         method: "POST",
         credentials: "include", // include cookies
       });
@@ -61,7 +61,11 @@ function Header() {
   };
 
   return (
-    <Navbar expand="lg" sticky="top">
+    <>
+    <div className="title">
+    <h1>SimpleSurvey.com</h1>
+    </div>
+        <Navbar expand="lg" sticky="top" className="navbar">
       <Container className="d-flex align-items-center">
         <Navbar.Brand>
           <Link to="/">
@@ -153,7 +157,7 @@ function Header() {
             )}
             {/* window.globalVariable  */}
             {isAuthenticated && (
-              <Nav.Item className="mx-2">
+              <Nav.Item className="logout">
                 <Button variant="outline-dark" size="md" onClick={handleLogout}>
                   Logout
                 </Button>
@@ -163,6 +167,8 @@ function Header() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
+    </>
   );
 }
 

@@ -54,6 +54,40 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+footer {
+  background-color: orange;
+  height: 150px;
+  padding-top: 1px;
+  margin-top: 30px;
+}
+
+.title {
+  background-color: orange;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.introtitle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+hr {
+  border-color: black;
+}
+
+.navbar {
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  background-color: #C5C6C7;
+}
+
+.logout {
+  position: absolute;
+  left: 90%;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
