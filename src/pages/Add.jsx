@@ -37,11 +37,7 @@ function CreateSurveys(props) {
     }
 
     try {
-<<<<<<< HEAD
-      const response = await fetch("https://localhost:8080/questions/add", {
-=======
       const response = await fetch("https://surveysiteapi.onrender.com/questions/add", {
->>>>>>> a4af62be4dac84f479a732df9a01a45b05a4f191
         method: "POST",
         headers: {
           "Content-Type": "application/json",
