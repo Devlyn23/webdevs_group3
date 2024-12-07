@@ -11,7 +11,11 @@ function MySurveys() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+<<<<<<< HEAD
         const response = await fetch("https://localhost:8080/surveys", {
+=======
+        const response = await fetch("https://surveysiteapi.onrender.com/surveys", {
+>>>>>>> a4af62be4dac84f479a732df9a01a45b05a4f191
           method: "GET",
           credentials: "include", // include cookies
         });
@@ -35,7 +39,11 @@ function MySurveys() {
 
   const handleDeleteS = async (id) => {
     try {
+<<<<<<< HEAD
       const response = await fetch("https://localhost:8080/surveys/" + id, {
+=======
+      const response = await fetch("https://surveysiteapi.onrender.com/surveys/" + id, {
+>>>>>>> a4af62be4dac84f479a732df9a01a45b05a4f191
         method: "DELETE",
         credentials: "include", // include cookies
       });
@@ -56,7 +64,11 @@ function MySurveys() {
   const questionsDelete = async (id) => {
     const data = { surveyid: id };
     try {
+<<<<<<< HEAD
       const response = await fetch("https://localhost:8080/questions", {
+=======
+      const response = await fetch("https://surveysiteapi.onrender.com/questions", {
+>>>>>>> a4af62be4dac84f479a732df9a01a45b05a4f191
         method: "DELETE",
         credentials: "include", // include cookies
         body: JSON.stringify(data),

@@ -21,7 +21,11 @@ function Registration() {
     }
 
     try {
+<<<<<<< HEAD
       const response = await fetch("https://localhost:8080/auth/registration", {
+=======
+      const response = await fetch("https://surveysiteapi.onrender.com/auth/registration", {
+>>>>>>> a4af62be4dac84f479a732df9a01a45b05a4f191
         method: "POST",
         headers: {
           "Content-Type": "application/json",
