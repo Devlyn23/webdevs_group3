@@ -45,11 +45,7 @@ function EditSurvey() {
 
   const handleDelete = async (id) => {
     try {
-<<<<<<< HEAD
-      const response = await fetch("https://localhost:8080/questions/" + id, {
-=======
       const response = await fetch("https://surveysiteapi.onrender.com/questions/" + id, {
->>>>>>> a4af62be4dac84f479a732df9a01a45b05a4f191
         method: "DELETE",
         credentials: "include", // include cookies
       });
