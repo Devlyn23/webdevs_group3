@@ -20,7 +20,7 @@ function Header() {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await fetch("http://localhost:8080/auth/status", {
+        const response = await fetch("https://surveysiteapi.onrender.com/auth/status", {
           method: "GET",
           credentials: "include",
         });
@@ -40,7 +40,7 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:8080/auth/logout", {
+      const response = await fetch("https://surveysiteapi.onrender.com/auth/logout", {
         method: "POST",
         credentials: "include", // include cookies
       });
